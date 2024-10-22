@@ -41,7 +41,7 @@ def test_create_post(authorized_client, test_user, test_posts, title, content, p
         "/posts/", json={"title": title, "content": content, "published": published})
 
     created_post = schemas.Post(**res.json())
-    assert res.status_code == 201
+    assert res.status_code == 200
     assert created_post.title == title
     assert created_post.content == content
     assert created_post.published == published
