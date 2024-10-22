@@ -64,6 +64,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/smd-fcc-fastapi:latest
           cache-from: type=registry,ref=user/app:buildcache
           cache-to: type=registry,ref=user/app:buildcache,mode=max
